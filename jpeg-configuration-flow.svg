@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900">
+  <!-- Background -->
+  <rect width="1000" height="900" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="500" y="30" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">Image Encryption and Decryption System</text>
+  
+  <!-- System Initialization -->
+  <rect x="50" y="60" width="900" height="100" rx="10" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2"/>
+  <text x="500" y="85" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#3f51b5">System Initialization</text>
+  
+  <!-- Sub-blocks in Initialization -->
+  <rect x="100" y="100" width="200" height="40" rx="5" fill="#c5cae9" stroke="#3f51b5" stroke-width="1"/>
+  <text x="200" y="125" font-family="Arial" font-size="14" text-anchor="middle" fill="#3f51b5">Create Output Directory</text>
+  
+  <rect x="400" y="100" width="200" height="40" rx="5" fill="#c5cae9" stroke="#3f51b5" stroke-width="1"/>
+  <text x="500" y="125" font-family="Arial" font-size="14" text-anchor="middle" fill="#3f51b5">Generate RSA Key Pair</text>
+  
+  <rect x="700" y="100" width="200" height="40" rx="5" fill="#c5cae9" stroke="#3f51b5" stroke-width="1"/>
+  <text x="800" y="125" font-family="Arial" font-size="14" text-anchor="middle" fill="#3f51b5">Read Input Image</text>
+  
+  <!-- Encryption Process -->
+  <rect x="50" y="190" width="900" height="250" rx="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="500" y="215" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#7b1fa2">Encryption Process</text>
+  
+  <!-- Detailed Encryption Sub-blocks -->
+  <!-- SA Block -->
+  <rect x="100" y="230" width="250" height="180" rx="5" fill="#e1bee7" stroke="#7b1fa2" stroke-width="1"/>
+  <text x="225" y="255" font-family="Arial" font-size="16" text-anchor="middle" fill="#7b1fa2">Simulated Annealing (SA)</text>
+  <rect x="120" y="270" width="210" height="120" rx="5" fill="#f8f9fa" stroke="#7b1fa2" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="225" y="290" font-family="Arial" font-size="12" text-anchor="middle">1. Create matrix from image</text>
+  <text x="225" y="315" font-family="Arial" font-size="12" text-anchor="middle">2. Apply temperature cooling</text>
+  <text x="225" y="340" font-family="Arial" font-size="12" text-anchor="middle">3. Perturb RGB values</text>
+  <text x="225" y="365" font-family="Arial" font-size="12" text-anchor="middle">4. Return transformed matrix</text>
+  
+  <!-- ICM Block -->
+  <rect x="400" y="230" width="250" height="180" rx="5" fill="#e1bee7" stroke="#7b1fa2" stroke-width="1"/>
+  <text x="525" y="255" font-family="Arial" font-size="16" text-anchor="middle" fill="#7b1fa2">Iterated Conditional Modes</text>
+  <rect x="420" y="270" width="210" height="120" rx="5" fill="#f8f9fa" stroke="#7b1fa2" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="525" y="290" font-family="Arial" font-size="12" text-anchor="middle">1. Get pixel neighborhoods</text>
+  <text x="525" y="315" font-family="Arial" font-size="12" text-anchor="middle">2. Compute average colors</text>
+  <text x="525" y="340" font-family="Arial" font-size="12" text-anchor="middle">3. Mix pixel with neighbors</text>
+  <text x="525" y="365" font-family="Arial" font-size="12" text-anchor="middle">4. Repeat for iterations</text>
+  
+  <!-- Shares Block -->
+  <rect x="700" y="230" width="250" height="180" rx="5" fill="#e1bee7" stroke="#7b1fa2" stroke-width="1"/>
+  <text x="825" y="255" font-family="Arial" font-size="16" text-anchor="middle" fill="#7b1fa2">Share Generation</text>
+  <rect x="720" y="270" width="210" height="120" rx="5" fill="#f8f9fa" stroke="#7b1fa2" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="825" y="290" font-family="Arial" font-size="12" text-anchor="middle">1. Create N-1 random shares</text>
+  <text x="825" y="315" font-family="Arial" font-size="12" text-anchor="middle">2. XOR all random shares</text>
+  <text x="825" y="340" font-family="Arial" font-size="12" text-anchor="middle">3. XOR result with original</text>
+  <text x="825" y="365" font-family="Arial" font-size="12" text-anchor="middle">4. Create final share</text>
+  
+  <!-- Security Layer -->
+  <rect x="50" y="470" width="900" height="120" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="500" y="495" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#e65100">Security Layer</text>
+  
+  <!-- Sub-blocks in Security -->
+  <rect x="100" y="520" width="200" height="50" rx="5" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="200" y="550" font-family="Arial" font-size="14" text-anchor="middle" fill="#e65100">Generate Digital Signature</text>
+  
+  <rect x="350" y="520" width="200" height="50" rx="5" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="450" y="550" font-family="Arial" font-size="14" text-anchor="middle" fill="#e65100">Save Shares to Files</text>
+  
+  <rect x="600" y="520" width="200" height="50" rx="5" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="700" y="550" font-family="Arial" font-size="14" text-anchor="middle" fill="#e65100">Save Signature to File</text>
+  
+  <rect x="850" y="520" width="50" height="50" rx="5" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="875" y="550" font-family="Arial" font-size="14" text-anchor="middle" fill="#e65100">↓</text>
+  
+  <!-- Verification Step -->
+  <rect x="350" y="620" width="300" height="60" rx="10" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="500" y="655" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold" fill="#c62828">Verify Digital Signature</text>
+  
+  <!-- Decryption Process -->
+  <rect x="50" y="710" width="900" height="180" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="500" y="735" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold" fill="#2e7d32">Decryption Process</text>
+  
+  <!-- Sub-blocks in Decryption -->
+  <rect x="100" y="760" width="250" height="100" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="225" y="785" font-family="Arial" font-size="16" text-anchor="middle" fill="#2e7d32">Share Combination</text>
+  <rect x="120" y="800" width="210" height="40" rx="5" fill="#f8f9fa" stroke="#2e7d32" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="225" y="825" font-family="Arial" font-size="12" text-anchor="middle">XOR all shares together</text>
+  
+  <rect x="400" y="760" width="250" height="100" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="525" y="785" font-family="Arial" font-size="16" text-anchor="middle" fill="#2e7d32">Reverse Processing</text>
+  <rect x="420" y="800" width="210" height="40" rx="5" fill="#f8f9fa" stroke="#2e7d32" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="525" y="825" font-family="Arial" font-size="12" text-anchor="middle">Apply reverseICM and reverseSA</text>
+  
+  <rect x="700" y="760" width="250" height="100" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="825" y="785" font-family="Arial" font-size="16" text-anchor="middle" fill="#2e7d32">Password Protection</text>
+  <rect x="720" y="800" width="210" height="40" rx="5" fill="#f8f9fa" stroke="#2e7d32" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="825" y="825" font-family="Arial" font-size="12" text-anchor="middle">AES encryption with password</text>
+  
+  <!-- Output -->
+  <rect x="400" y="920" width="200" height="50" rx="10" fill="#bbdefb" stroke="#1565c0" stroke-width="2"/>
+  <text x="500" y="950" font-family="Arial" font-size="16" text-anchor="middle" fill="#1565c0">Final Protected Image</text>
+  
+  <!-- Flow Arrows - Main flow -->
+  <!-- Init to Encryption -->
+  <line x1="500" y1="160" x2="500" y2="190" stroke="#333" stroke-width="2"/>
+  <polygon points="500,190 495,180 505,180" fill="#333"/>
+  
+  <!-- Encryption Flow -->
+  <line x1="350" y1="320" x2="400" y2="320" stroke="#7b1fa2" stroke-width="2"/>
+  <polygon points="400,320 390,315 390,325" fill="#7b1fa2"/>
+  
+  <line x1="650" y1="320" x2="700" y2="320" stroke="#7b1fa2" stroke-width="2"/>
+  <polygon points="700,320 690,315 690,325" fill="#7b1fa2"/>
+  
+  <!-- Encryption to Security -->
+  <line x1="500" y1="440" x2="500" y2="470" stroke="#333" stroke-width="2"/>
+  <polygon points="500,470 495,460 505,460" fill="#333"/>
+  
+  <!-- Security Flow -->
+  <line x1="300" y1="545" x2="350" y2="545" stroke="#e65100" stroke-width="2"/>
+  <polygon points="350,545 340,540 340,550" fill="#e65100"/>
+  
+  <line x1="550" y1="545" x2="600" y2="545" stroke="#e65100" stroke-width="2"/>
+  <polygon points="600,545 590,540 590,550" fill="#e65100"/>
+  
+  <line x1="800" y1="545" x2="850" y2="545" stroke="#e65100" stroke-width="2"/>
+  <polygon points="850,545 840,540 840,550" fill="#e65100"/>
+  
+  <!-- Security to Verification -->
+  <line x1="875" y1="570" x2="875" y2="595" stroke="#333" stroke-width="2"/>
+  <line x1="875" y1="595" x2="500" y2="595" stroke="#333" stroke-width="2"/>
+  <line x1="500" y1="595" x2="500" y2="620" stroke="#333" stroke-width="2"/>
+  <polygon points="500,620 495,610 505,610" fill="#333"/>
+  
+  <!-- Verification to Decryption -->
+  <line x1="500" y1="680" x2="500" y2="710" stroke="#333" stroke-width="2"/>
+  <polygon points="500,710 495,700 505,700" fill="#333"/>
+  
+  <!-- Decryption Flow -->
+  <line x1="350" y1="810" x2="400" y2="810" stroke="#2e7d32" stroke-width="2"/>
+  <polygon points="400,810 390,805 390,815" fill="#2e7d32"/>
+  
+  <line x1="650" y1="810" x2="700" y2="810" stroke="#2e7d32" stroke-width="2"/>
+  <polygon points="700,810 690,805 690,815" fill="#2e7d32"/>
+  
+  <!-- Decryption to Output -->
+  <line x1="500" y1="890" x2="500" y2="920" stroke="#333" stroke-width="2"/>
+  <polygon points="500,920 495,910 505,910" fill="#333"/>
+  
+  <!-- Error paths -->
+  <rect x="820" y="630" width="100" height="40" rx="5" fill="#ffccbc" stroke="#d84315" stroke-width="1"/>
+  <text x="870" y="655" font-family="Arial" font-size="12" text-anchor="middle" fill="#d84315">Error Handling</text>
+  
+  <line x1="650" y1="650" x2="700" y2="650" stroke="#d84315" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="700" y1="650" x2="820" y2="650" stroke="#d84315" stroke-width="2" stroke-dasharray="5,5"/>
+  <polygon points="820,650 810,645 810,655" fill="#d84315"/>
+</svg>
