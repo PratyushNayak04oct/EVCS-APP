@@ -44,20 +44,20 @@ function Protection() {
 
     setProcessing(true);
     setError(null);
-    
+
     try {
       const formData = new FormData();
-      formData.append('image', file);
+      formData.append("image", file);
 
-      const response = await fetch('http://localhost:3001/process-image', {
-        method: 'POST',
+      const response = await fetch("http://localhost:3001/process-image", {
+        method: "POST",
         body: formData,
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Processing failed');
+        throw new Error(data.error || "Processing failed");
       }
 
       setOutputFiles(data.files);
@@ -70,7 +70,7 @@ function Protection() {
   };
 
   const downloadFile = (path, filename) => {
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = `http://localhost:3001${path}`;
     link.download = filename;
     document.body.appendChild(link);
@@ -84,16 +84,30 @@ function Protection() {
         <h1 className="mb-4 text-2xl font-semibold text-blue-600">
           File Encryptor With Password Protection
         </h1>
-        
+
         <div className="mb-8 space-y-4">
-          <p>This is an image encryption system that uses a multi-layered approach:</p>
+          <p>
+            This is an image encryption system that uses a multi-layered
+            approach:
+          </p>
           <ol className="list-decimal ml-6 space-y-2">
-            <li>Applies Simulated Annealing (SA) and Iterated Conditional Modes (ICM) to transform the image</li>
-            <li>Splits the transformed image into multiple shares using secret sharing</li>
+            <li>
+              Applies Simulated Annealing (SA) and Iterated Conditional Modes
+              (ICM) to transform the image
+            </li>
+            <li>
+              Splits the transformed image into multiple shares using secret
+              sharing
+            </li>
             <li>Adds RSA digital signatures for authenticity</li>
-            <li>Includes AES password protection for the final encrypted image</li>
+            <li>
+              Includes AES password protection for the final encrypted image
+            </li>
           </ol>
-          <p>The process ensures security through multiple encryption layers and verification mechanisms.</p>
+          <p>
+            The process ensures security through multiple encryption layers and
+            verification mechanisms.
+          </p>
         </div>
 
         <input
@@ -117,9 +131,16 @@ function Protection() {
         {file && (
           <div className="mb-6 flex flex-col md:flex-row gap-6 p-4 bg-gray-50 rounded-md">
             <div className="space-y-2">
-              <p><span className="font-semibold">Name:</span> {file.name}</p>
-              <p><span className="font-semibold">Type:</span> {file.type}</p>
-              <p><span className="font-semibold">Size:</span> {(file.size / 1024).toFixed(2)} KB</p>
+              <p>
+                <span className="font-semibold">Name:</span> {file.name}
+              </p>
+              <p>
+                <span className="font-semibold">Type:</span> {file.type}
+              </p>
+              <p>
+                <span className="font-semibold">Size:</span>{" "}
+                {(file.size / 1024).toFixed(2)} KB
+              </p>
             </div>
             {fileContent && (
               <div className="flex-shrink-0">
@@ -139,7 +160,7 @@ function Protection() {
           onClick={onSubmit}
           disabled={processing || !file}
         >
-          {processing ? 'Processing...' : 'Start Encryption Process'}
+          {processing ? "Processing..." : "Start Encryption Process"}
         </button>
 
         {processing && (
@@ -160,7 +181,10 @@ function Protection() {
             <h2 className="font-semibold mb-4">Output Files:</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {outputFiles.map((file, index) => (
-                <div key={index} className="p-4 bg-gray-50 rounded-md flex justify-between items-center">
+                <div
+                  key={index}
+                  className="p-4 bg-gray-50 rounded-md flex justify-between items-center"
+                >
                   <span className="text-sm truncate">{file.name}</span>
                   <button
                     onClick={() => downloadFile(file.path, file.name)}

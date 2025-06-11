@@ -1,0 +1,49 @@
+# User Manual - EVCS(Enhanced Visual Cryptography Scheme)
+
+## 1. Overview
+This web application allows users to interact via a frontend built in React. The backend is powered by Express.js, which communicates with Java code to perform core operations like processing, computation, or data handling.
+
+---
+
+## 2. How to Run the Project
+
+### Step 1: Requirements
+- Node.js (v18 or later)
+- Java JDK (v17 or the version used)
+
+---
+
+### Step 2: Running the Backend (Express + Java)
+1. Navigate to the backend folder:
+2. npm install
+3. npm start
+
+---
+
+### Step 3: Running the Frontend (React)
+1. Navigate to the frontend folder:
+2. npm install
+3. npm run dev
+
+
+2. Access the app at `http://localhost:5173` or the port shown in terminal.
+
+---
+
+## 3. Using the Application
+- Navigate through the interface using the navbar.
+- Submit forms or inputs that trigger Java-based processing via backend.
+- Responses will be shown on the screen after Express receives output from Java.
+
+---
+
+## 4. Troubleshooting
+- Make sure Java is added to PATH and runs from terminal.
+- Ensure both frontend and backend are running simultaneously.
+- Check terminal for any errors from Express or Java.
+
+---
+
+## 5. Notes
+- This project does **not use .env**. All config is hardcoded or internal.
+- Tested on Chrome for best compatibility.

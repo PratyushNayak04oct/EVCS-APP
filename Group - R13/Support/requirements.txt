@@ -1,0 +1,5 @@
+# Tool Requirements
+
+Node.js >= 18.x  
+Java JDK >= 17  
+npm packages used in backend and frontend (listed in package.json)

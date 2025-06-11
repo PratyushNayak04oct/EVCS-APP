@@ -1,0 +1,22 @@
+# Project Setup Instructions
+
+## Requirements:
+- Node.js (v18 or above)
+- Java JDK (v17 or the latest)
+- Git (optional)
+
+## Steps to Run:
+
+### Backend (Express)
+1. Navigate to the backend folder.
+2. Run:
+   > npm install  
+   > npm start
+
+### Frontend
+1. Navigate to frontend folder.
+2. Run:
+   > npm install  
+   > npm run dev
+
+Ensure the Express backend is correctly calling the Java process (via `child_process`, API bridge, or HTTP).
