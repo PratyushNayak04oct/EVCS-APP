@@ -450,7 +450,7 @@ public class Main {
     
             // Step 9: Password protect the decrypted image
             System.out.println("Adding password protection...");
-            String password = "yourSecurePassword123";
+            String password = "password123";
             File protectedFile = new File(outputDir, "protected_output.png");
             protectWithPassword(
                 decryptedImage,
